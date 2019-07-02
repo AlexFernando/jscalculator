@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import './Button.css';
+import './Button.css'
+
 
 class Button extends Component {
    
     render() { 
         return ( 
-            <div className="button-symbol">
-                <p className="grow">{this.props.symbol}</p>
+            <div className="button-symbol" onClick= {() => this.props.handleClick(this.props.children)}>
+                {this.props.children}
             </div>
          );
     }
