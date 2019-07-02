@@ -6,8 +6,9 @@ class ScreenResult extends Component {
     render() { 
         return (
             <div className= " ">
-                {this.props.expression}
-                {this.props.result}
+                <p>Expression {this.props.expression}</p>
+                <p>result {this.props.result}</p>
+           
             </div>
         );
     }
