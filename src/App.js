@@ -117,41 +117,31 @@ class App extends Component {
     
 
   render () {
+    let color = '#000';
+
     return(
       <div className="fullscreenDiv">
-          <ScreenResult result = {this.state.result} expression= {this.state.expression} />
-          <div>
-            <Button handleClick={this.clearOperation}>AC</Button>
-          </div>
-          <div>
-            <Button handleClick={this.displayExpression}>7</Button>
-            <Button handleClick={this.displayExpression}>8</Button>
-            <Button handleClick={this.displayExpression}>9</Button>
-            <Button handleClick={this.addOperation}>+</Button>
-          </div>
-
-          <div>
-            <Button handleClick={this.displayExpression}>4</Button>
-            <Button handleClick={this.displayExpression}>5</Button>
-            <Button handleClick={this.displayExpression}>6</Button>
-            <Button handleClick={this.minusOperation}>-</Button>
-          </div>
-
-          <div>
-            <Button handleClick={this.displayExpression}>1</Button>
-            <Button handleClick={this.displayExpression}>2</Button>
-            <Button handleClick={this.displayExpression}>3</Button>
-            <Button handleClick={this.multiplyOperation}>*</Button>
- 
-          </div>
-
-          <div>
-            <Button handleClick={this.displayExpression}>0</Button>
-            <Button handleClick={this.displayDecimalPoint}>.</Button>
-            <Button handleClick={this.equalOperation}>=</Button>
-            <Button handleClick={this.divideOperation}>/</Button>
-          </div>
           
+          <div className="buttons-container">
+              <Button  handleClick={this.clearOperation}>AC</Button>
+              <ScreenResult result = {this.state.result} expression= {this.state.expression} />
+              <Button  handleClick={this.divideOperation}>/</Button>
+              <Button  handleClick={this.multiplyOperation}>x</Button>
+              <Button  handleClick={this.displayExpression}>7</Button>
+              <Button  handleClick={this.displayExpression}>8</Button>
+              <Button  handleClick={this.displayExpression}>9</Button>
+              <Button  handleClick={this.minusOperation}>-</Button> 
+              <Button  handleClick={this.displayExpression}>4</Button>
+              <Button  handleClick={this.displayExpression}>5</Button>
+              <Button  handleClick={this.displayExpression}>6</Button>              
+              <Button  handleClick={this.addOperation}>+</Button>
+              <Button  handleClick={this.displayExpression}>1</Button>
+              <Button  handleClick={this.displayExpression}>2</Button>
+              <Button  handleClick={this.displayExpression}>3</Button>
+              <Button  handleClick={this.displayExpression}>0</Button>
+              <Button  handleClick={this.displayDecimalPoint}>.</Button>
+              <Button  handleClick={this.equalOperation}>=</Button>
+          </div>
       </div>
 
     )
