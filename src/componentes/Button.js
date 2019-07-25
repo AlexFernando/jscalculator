@@ -11,7 +11,7 @@ class Button extends Component {
     })
 
     render() {
-        console.log(this.isOperator)
+        
         return ( 
             <div className={`button-symbol ${
                 this.isOperator ? "color-operator" : ""
