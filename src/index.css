@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=c3c3d600&noise=a2a2b8&density=100&opacity=100");
+  background-color: #bfbfd8;
+
 }
 
 code {
