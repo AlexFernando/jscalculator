@@ -4,32 +4,31 @@ import Button from './componentes/Button';
 import ScreenResult from './componentes/ScreenResult';
 import ClearButton from './componentes/ClearButton';
 
-
 var math = require('mathjs');
 
 class App extends Component {
-
   state = {
     result : "0",
     expression: ""
   }
 
   displayExpression = value => {
+
     if(this.state.result === "0") {
-      console.log("entre en el if", this.state.result," ",value)
       this.setState({
         result: value,
         expression : this.state.expression + value
       })
     }
-    this.setState({
-      result: this.state.result + value,
-      expression : this.state.expression + value
-    });
+    else {
+      this.setState({
+        result: this.state.result + value,
+        expression : this.state.expression + value
+      });
+    }
   } 
 
   equalOperation = () => {
-    console.log("entro", math.evaluate(this.state.result))
     this.setState({
       result: math.evaluate(this.state.result),
       expression : this.state.expression + "=" + math.evaluate(this.state.result)
@@ -47,7 +46,6 @@ class App extends Component {
 
   displayDecimalPoint = value => {
 
-      
       this.setState({
         result : this.state.result + value,
         expression: this.state.expression + value,
@@ -55,10 +53,9 @@ class App extends Component {
   
   }
 
-
   clearOperation = () => {
     this.setState({
-      result: "",
+      result: "0",
       expression: "",
     })
   }
